@@ -150,13 +150,13 @@ function Cart() {
                         </tr>
                         <tr>
                             <th>
-                                <td> </td>
+                                <td>
+                                    <h3 className="text-xl font-bold">Shop Manger</h3>
+                                    <h3 className="text-base font-bold">Sector 10, Uttara, Dhaka</h3>
+                                </td>
                             </th>
                             <td></td>
-                            <td>
-                                <h3 className="text-xl font-bold">Shop Manger</h3>
-                                <h3 className="text-base font-bold">Sector 10, Uttara, Dhaka</h3>
-                            </td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
