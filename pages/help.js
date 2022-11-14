@@ -13,7 +13,7 @@ const Help = () => {
                         <button className="btn btn-primary">Send</button>
                     </form>
                 </div>
-                <figure>
+                <figure className='glass p-2 rounded-xl order-first lg:order-last'>
                     <img src='/help.svg' className='h-full rounded-lg' alt='Help' />
                 </figure>
             </div>

@@ -4,7 +4,7 @@ const AddProduct = () => {
     return (
         <>
             <div className='mx-4 my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                <figure>
+                <figure className='glass p-2 rounded-xl'>
                     <img src='/add.svg' className='h-full rounded-lg' alt='addProduct' />
                 </figure>
                 <div className=''>

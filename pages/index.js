@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import NewUsers from '../components/NewUsers'
 import Stat from '../components/Stat'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main className='container mx-auto'>
         <Stat />
+        <NewUsers />
       </main>
     </>
   )

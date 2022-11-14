@@ -15,7 +15,7 @@ const Manage = () => {
                     items.map(item => {
                         return (
                             <>
-                                <div className="card w-80 bg-base-100 shadow-xl" key={item.id}>
+                                <div className="card w-80 bg-base-100 shadow-xl glass" key={item.id}>
                                     <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title text-2xl text-white">{item.title}</h2>
