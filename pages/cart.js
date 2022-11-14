@@ -138,28 +138,12 @@ function Cart() {
                                 <h3 className="text-lg font-bold">$ {cartTotal}</h3>
                             </td>
                         </tr>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <td>
-                                    <h3 className="text-xl font-bold">Shop Manger</h3>
-                                    <h3 className="text-base font-bold">Sector 10, Uttara, Dhaka</h3>
-                                </td>
-                            </th>
-                            <td></td>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
+                <div className="mt-10">
+                    <h3 className="text-xl font-bold">Shop Manger</h3>
+                    <h3 className="text-base font-bold">Sector 10, Uttara, Dhaka</h3>
+                </div>
             </div>
 
             <div className="w-full flex flex-col px-4 my-8">
