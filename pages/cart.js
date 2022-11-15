@@ -124,7 +124,7 @@ function Cart() {
                         {
                             items.map(product => {
                                 return (
-                                    <tr>
+                                    <tr key={product.id}>
                                         <th>{product.title}</th>
                                         <td>{product.quantity}</td>
                                         <td>{product.price}</td>
