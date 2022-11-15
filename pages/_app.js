@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Auth0Provider
         domain="dev-jr003cks0qsytkp1.us.auth0.com"
         clientId="kOdhfF6pn985Z8jZxV8fMVJCxdwKmqIQ"
-        redirectUri={globalThis.location.origin}
+        redirectUri={globalThis.location?.origin}
       >
         {
           isAuthenticated ? <>
