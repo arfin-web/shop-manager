@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Stat from '../components/Stat'
+import NewUsers from '../components/NewUsers'
 import Main from './main'
 
 export default function Home() {
@@ -9,7 +11,9 @@ export default function Home() {
         <meta name="description" content="Shop Manager" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main />
+      <main className='container mx-auto'>
+        <Main />
+      </main>
     </>
   )
 }
