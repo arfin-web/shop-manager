@@ -15,13 +15,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function MyApp({ Component, pageProps }) {
   const { user, isAuthenticated, logout } = useAuth0();
-  const windows = typeof window !== "undefined";
   return (
     <>
       <Auth0Provider
         domain="dev-jr003cks0qsytkp1.us.auth0.com"
         clientId="kOdhfF6pn985Z8jZxV8fMVJCxdwKmqIQ"
-        redirectUri={windows.location.origin}
+        redirectUri={globalThis.location.origin}
       >
         {
           isAuthenticated ? <>
