@@ -10,6 +10,7 @@ import Testimonials from '../components/Testimonials'
 const Main = () => {
     return (
         <>
+            <Navbar />
             <Hero />
             <Feature />
             <Statistics />
