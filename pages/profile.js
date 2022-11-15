@@ -1,8 +1,14 @@
 import React from 'react'
+import Head from 'next/head'
 
 const profile = () => {
     return (
         <>
+            <Head>
+                <title>Shop Manager</title>
+                <meta name="description" content="Shop Manager" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className='container mx-auto p-4 flex justify-center align-center'>
                 <div className="hero min-h-screen rounded-xl" style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}>
                     <div className="hero-overlay bg-opacity-70"></div>

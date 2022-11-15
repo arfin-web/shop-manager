@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useCart } from "react-use-cart";
 import { useReactToPrint } from 'react-to-print';
+import Head from "next/head";
 
 function Cart() {
     const componentRef = useRef();
@@ -16,14 +17,18 @@ function Cart() {
         items,
         updateItemQuantity,
         removeItem,
-        cartTotal,
-        addItem
+        cartTotal
     } = useCart();
 
     if (isEmpty) return <h1 className="text-3xl font-semibold text-center my-4">Your cart is empty</h1>;
 
     return (
         <>
+            <Head>
+                <title>Shop Manager</title>
+                <meta name="description" content="Shop Manager" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className="container mx-auto p-4">
                 <div className="overflow-x-auto w-full">
                     <h1 className="text-3xl text-primary font-bold">Cart <span className="text-secondary">({totalUniqueItems})</span></h1>

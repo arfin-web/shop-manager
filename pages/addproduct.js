@@ -1,8 +1,14 @@
 import React from 'react'
+import Head from 'next/head'
 
 const AddProduct = () => {
     return (
         <>
+            <Head>
+                <title>Shop Manager</title>
+                <meta name="description" content="Shop Manager" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className='mx-4 my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
                 <figure className='glass p-2 rounded-xl'>
                     <img src='/add.svg' className='h-full rounded-lg' alt='addProduct' />

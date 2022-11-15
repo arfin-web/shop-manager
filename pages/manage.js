@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Head from 'next/head'
 
 const Manage = () => {
     const [items, setItems] = useState([])
@@ -9,13 +10,18 @@ const Manage = () => {
     }, [])
     return (
         <>
+            <Head>
+                <title>Shop Manager</title>
+                <meta name="description" content="Shop Manager" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <h1 className='text-4xl text-primary text-center font-bold mt-8 mb-10'>Manage <span className='text-secondary'>Product</span></h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-4 my-4">
                 {
                     items.map(item => {
                         return (
                             <>
-                                <div className="card w-80 bg-base-100 shadow-xl glass" key={item.id}>
+                                <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
                                     <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title text-2xl text-white">{item.title}</h2>

@@ -1,8 +1,14 @@
 import React from 'react'
+import Head from 'next/head'
 
 const Help = () => {
     return (
         <>
+            <Head>
+                <title>Shop Manager</title>
+                <meta name="description" content="Shop Manager" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className='mx-4 my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
                 <div className=''>
                     <h1 className='text-4xl text-primary font-bold mb-10'>Stay <span className='text-secondary'>With Us</span></h1>
