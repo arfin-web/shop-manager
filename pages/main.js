@@ -11,6 +11,11 @@ const Main = () => {
     return (
         <>
             <Hero />
+            <Feature />
+            <Statistics />
+            <Pricing />
+            <Testimonials />
+            <Footer />
         </>
     )
 }
