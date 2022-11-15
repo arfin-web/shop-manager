@@ -43,15 +43,6 @@ function MyApp({ Component, pageProps }) {
                 </div>
                 <label className="text-secondary text-4xl cursor-pointer"><Link href='/cart'><ImCart /></Link></label>
               </div>
-              {
-                isAuthenticated && (
-                  <div>
-                    <img src={user.picture} alt={user.name} />
-                    <h2>{user.name}</h2>
-                    <p>{user.email}</p>
-                  </div>
-                )
-              }
               <Component {...pageProps} />
             </div>
             <div className="drawer-side">
@@ -61,14 +52,18 @@ function MyApp({ Component, pageProps }) {
                   <Link href='/' className='text-3xl text-primary font-extrabold cursor-pointer mb-8'>Shop<span className='text-secondary'>Manager</span></Link>
                 </li>
                 <li>
-                  <div className="avatar mb-4 flex flex-col justify-center align-center">
-                    <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <Link href='/profile'><img src="https://placeimg.com/192/192/people" /></Link>
-                    </div>
-                    <h1 className='text-3xl text-secondary font-bold'>
-                      <Link href='/profile'>Alexa Nt</Link>
-                    </h1>
-                  </div>
+                  {
+                    isAuthenticated && (
+                      <div className="avatar mb-4 flex flex-col justify-center align-center">
+                        <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                          <Link href='/profile'><img src={user.picture} /></Link>
+                        </div>
+                        <h1 className='text-3xl text-secondary font-bold'>
+                          <Link href='/profile'>{user.name}</Link>
+                        </h1>
+                      </div>
+                    )
+                  }
                 </li>
                 <li className='hover:glass rounded-full mb-2.5'>
                   <div className='text-2xl hover:text-white'><MdSpaceDashboard /> <Link href="/dashboard">Dashboard</Link></div>
