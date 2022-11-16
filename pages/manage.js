@@ -24,9 +24,9 @@ const Manage = () => {
                                 <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
                                     <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title text-2xl text-white">{item.title}</h2>
-                                        <h2 className="card-title text-xl text-slate-300">{item.category}</h2>
-                                        <h2 className="card-title text-3xl text-white"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
+                                        <h2 className="card-title text-2xl">{item.title}</h2>
+                                        <h2 className="card-title text-xl">{item.category}</h2>
+                                        <h2 className="card-title text-3xl"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
                                         <div className="card-actions justify-evenly align-center mt-2.5">
                                             <button className="btn btn-secondary">Delete</button>
                                             <button className="btn btn-primary">Update</button>

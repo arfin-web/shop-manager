@@ -1,7 +1,8 @@
 import '../styles/globals.css'
+import { useEffect } from 'react'
+import { themeChange } from 'theme-change'
 import Link from 'next/link'
 import { HiBars3CenterLeft } from 'react-icons/hi2'
-import { ImCart } from 'react-icons/im'
 import {
   MdSpaceDashboard,
   MdShoppingCart,
@@ -12,27 +13,30 @@ import {
 import { CartProvider } from "react-use-cart";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    themeChange(false)
+    // 👆 false parameter is required for react project
+  }, [])
   return (
     <>
       <CartProvider>
         <div className="drawer drawer-mobile">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content bg-base-200">
-            <div className='px-2.5 py-1 flex justify-between items-center h-14 bg-base-100 sticky top-0 z-10 lg:hidden'>
-              <label htmlFor="my-drawer-2" className="drawer-button text-white text-4xl cursor-pointer"><HiBars3CenterLeft /></label>
-              <Link href='/' className='text-primary text-3xl font-extrabold cursor-pointer'>Shop<span className='text-secondary'> Manager</span></Link>
-              <label className="text-secondary text-4xl cursor-pointer"><Link href='/cart'><ImCart /></Link></label>
-            </div>
-            <div className='px-4 py-1 flex justify-between items-center h-20 bg-base-100 sticky top-0 z-10 desktop-head'>
-              <div className="form-control">
+            <div className='px-2.5 py-1 flex justify-between items-center h-14 bg-base-100 sticky top-0 z-10'>
+              <label htmlFor="my-drawer-2" className="drawer-button text-4xl cursor-pointer lg:invisible"><HiBars3CenterLeft /></label>
+              <div className="form-control invisible">
                 <div className="input-group">
-                  <input type="text" placeholder="Search…" className="input input-bordered" />
+                  <input type="text" placeholder="Search…" className="input input-bordered w-28" />
                   <button className="btn btn-square glass">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#D926A9"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </button>
                 </div>
               </div>
-              <label className="text-secondary text-4xl cursor-pointer"><Link href='/cart'><ImCart /></Link></label>
+              <select data-choose-theme className="select select-bordered select-sm font-bold w-32">
+                <option className='text-lg font-bold' value="dark" selected>Dark Mode</option>
+                <option className='text-lg font-bold' value="light">Light Mode</option>
+              </select>
             </div>
             <Component {...pageProps} />
           </div>
@@ -53,19 +57,19 @@ function MyApp({ Component, pageProps }) {
                 </div>
               </li>
               <li className='hover:glass rounded-full mb-2.5'>
-                <div className='text-2xl hover:text-white'><MdSpaceDashboard /> <Link href="/dashboard">Dashboard</Link></div>
+                <div className='text-2xl hover:text-primary hover:font-bold'><MdSpaceDashboard /> <Link href="/dashboard">Dashboard</Link></div>
               </li>
               <li className='hover:glass rounded-full mb-2.5'>
-                <div className='text-2xl hover:text-white'><MdShoppingCart /> <Link href="/products">Products</Link></div>
+                <div className='text-2xl hover:text-primary hover:font-bold'><MdShoppingCart /> <Link href="/products">Products</Link></div>
               </li>
               <li className='hover:glass rounded-full mb-2.5'>
-                <div className='text-2xl hover:text-white'><MdAddShoppingCart /> <Link href="/addproduct">Add Product</Link></div>
+                <div className='text-2xl hover:text-primary hover:font-bold'><MdAddShoppingCart /> <Link href="/addproduct">Add Product</Link></div>
               </li>
               <li className='hover:glass rounded-full mb-2.5'>
-                <div className='text-2xl hover:text-white'><MdSettingsInputSvideo /> <Link href="/manage">Manage</Link></div>
+                <div className='text-2xl hover:text-primary hover:font-bold'><MdSettingsInputSvideo /> <Link href="/manage">Manage</Link></div>
               </li>
               <li className='hover:glass rounded-full mb-2.5'>
-                <div className='text-2xl hover:text-white'><MdOutlineHelp /> <Link href="/help">Help</Link></div>
+                <div className='text-2xl hover:text-primary hover:font-bold'><MdOutlineHelp /> <Link href="/help">Help</Link></div>
               </li>
             </ul>
           </div>

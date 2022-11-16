@@ -15,7 +15,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
     "react-to-print": "^2.14.8",
-    "react-use-cart": "^1.13.0"
+    "react-use-cart": "^1.13.0",
+    "theme-change": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

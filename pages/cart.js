@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useCart } from "react-use-cart";
 import { useReactToPrint } from 'react-to-print';
 import Head from "next/head";
+import Link from "next/link";
 
 function Cart() {
     const componentRef = useRef();
@@ -29,6 +30,23 @@ function Cart() {
                 <meta name="description" content="Shop Manager" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <div className='px-2.5 py-1 flex justify-between items-center h-14 bg-base-100 sticky top-0 z-20'>
+                <div className="form-control">
+                    <div className="input-group">
+                        <input type="text" placeholder="Search…" className="input input-bordered w-36" />
+                        <button className="btn btn-square glass">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#D926A9"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </button>
+                    </div>
+                </div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle">
+                    <div className="indicator">
+                        <Link href='/cart'><svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg></Link>
+                        <span className="badge badge-md indicator-item">{totalUniqueItems}</span>
+                    </div>
+                </label>
+
+            </div>
             <div className="container mx-auto p-4">
                 <div className="overflow-x-auto w-full">
                     <h1 className="text-3xl text-primary font-bold">Cart <span className="text-secondary">({totalUniqueItems})</span></h1>
@@ -89,26 +107,26 @@ function Cart() {
                 <h1 className="text-2xl font-bold my-4">Billed To</h1>
                 <div className="form-control mb-4">
                     <label className="input-group">
-                        <span className="text-xl font-bold">Name</span>
-                        <input type="text" placeholder="Client Name" className="input input-ghost text-xl" />
+                        <span className="text-md font-bold">Name</span>
+                        <input type="text" placeholder="Client Name" className="input input-ghost text-md" />
                     </label>
                 </div>
                 <div className="form-control mb-4">
                     <label className="input-group">
-                        <span className="text-xl font-bold">Email</span>
-                        <input type="text" placeholder="info@site.com" className="input input-ghost text-xl" />
+                        <span className="text-md font-bold">Email</span>
+                        <input type="text" placeholder="info@site.com" className="input input-ghost text-md" />
                     </label>
                 </div>
                 <div className="form-control mb-4">
                     <label className="input-group">
-                        <span className="text-xl font-bold">Address</span>
-                        <input type="text" placeholder="Street No 1, Uttara, Dhaka" className="input input-ghost text-xl" />
+                        <span className="text-md font-bold">Address</span>
+                        <input type="text" placeholder="Street No 1, Uttara, Dhaka" className="input input-ghost text-md" />
                     </label>
                 </div>
                 <div className="form-control mb-8">
                     <label className="input-group">
-                        <span className="text-xl font-bold">Zip Code</span>
-                        <input type="text" placeholder="1230" className="input input-ghost text-xl" />
+                        <span className="text-md font-bold">Zip Code</span>
+                        <input type="text" placeholder="1230" className="input input-ghost text-md" />
                     </label>
                 </div>
                 <h1 className="text-3xl font-bold my-4">Total Item: ({totalUniqueItems})</h1>
