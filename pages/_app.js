@@ -36,6 +36,12 @@ function MyApp({ Component, pageProps }) {
               <select data-choose-theme className="select select-bordered select-sm font-bold w-32">
                 <option className='text-lg font-bold' value="dark" selected>Dark Mode</option>
                 <option className='text-lg font-bold' value="light">Light Mode</option>
+                <option className='text-lg font-bold' value="retro">Retro Mode</option>
+                <option className='text-lg font-bold' value="cyberpunk">Cyberpunk Mode</option>
+                <option className='text-lg font-bold' value="valentine">Valentine Mode</option>
+                <option className='text-lg font-bold' value="aqua">Aqua Mode</option>
+                <option className='text-lg font-bold' value="luxury">Luxury Mode</option>
+                <option className='text-lg font-bold' value="coffee">Coffee Mode</option>
               </select>
             </div>
             <Component {...pageProps} />
