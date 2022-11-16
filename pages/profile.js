@@ -23,16 +23,16 @@ const profile = () => {
                                 <table className="table w-full">
                                     <tbody>
                                         <tr>
-                                            <td className='text-lg font-bold'>Name:</td>
-                                            <td className='text-lg'>Alexa Nt</td>
+                                            <td className='text-lg text-primary font-bold'>Name:</td>
+                                            <td className='text-lg text-primary'>Alexa Nt</td>
                                         </tr>
                                         <tr>
-                                            <td className='text-lg font-bold'>Email:</td>
-                                            <td className='text-lg'>alexa@mail.com</td>
+                                            <td className='text-lg text-primary font-bold'>Email:</td>
+                                            <td className='text-lg text-primary'>alexa@mail.com</td>
                                         </tr>
                                         <tr>
-                                            <td className='text-lg font-bold'>Phone:</td>
-                                            <td className='text-lg'>+88017458634</td>
+                                            <td className='text-lg text-primary font-bold'>Phone:</td>
+                                            <td className='text-lg text-primary'>+88017458634</td>
                                         </tr>
                                     </tbody>
                                 </table>
