@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Zoom from 'react-reveal/Zoom';
 
 const Help = () => {
     return (
@@ -19,9 +20,11 @@ const Help = () => {
                         <button className="btn btn-primary">Send</button>
                     </form>
                 </div>
-                <figure className='glass p-2 rounded-xl order-first lg:order-last'>
-                    <img src='/help.svg' className='h-full rounded-lg' alt='Help' />
-                </figure>
+                <Zoom>
+                    <figure className='glass p-2 rounded-xl order-first lg:order-last'>
+                        <img src='/help.svg' className='h-full rounded-lg' alt='Help' />
+                    </figure>
+                </Zoom>
             </div>
         </>
     )

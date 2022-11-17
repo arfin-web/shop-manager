@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Stat from '../components/Stat'
 import NewUsers from '../components/NewUsers'
+import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
   return (
@@ -11,8 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='container mx-auto'>
-        <Stat />
-        <NewUsers />
+        <Zoom>
+          <Stat />
+        </Zoom>
+        <Zoom>
+          <NewUsers />
+        </Zoom>
       </main>
     </>
   )

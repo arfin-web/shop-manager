@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Zoom from 'react-reveal/Zoom';
 
 const AddProduct = () => {
     return (
@@ -10,9 +11,11 @@ const AddProduct = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='mx-4 my-4 grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                <figure className='glass p-2 rounded-xl'>
-                    <img src='/add.svg' className='h-full rounded-lg' alt='addProduct' />
-                </figure>
+                <Zoom>
+                    <figure className='glass p-2 rounded-xl'>
+                        <img src='/add.svg' className='h-full rounded-lg' alt='addProduct' />
+                    </figure>
+                </Zoom>
                 <div className=''>
                     <h1 className='text-4xl text-primary font-bold mb-10'>Add New <span className='text-secondary'>Product</span></h1>
                     <form className='flex flex-col'>

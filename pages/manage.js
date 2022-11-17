@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
+import Zoom from 'react-reveal/Zoom';
 
 const Manage = () => {
     const [items, setItems] = useState([])
@@ -21,18 +22,20 @@ const Manage = () => {
                     items.map(item => {
                         return (
                             <>
-                                <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
-                                    <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title text-2xl">{item.title}</h2>
-                                        <h2 className="card-title text-xl">{item.category}</h2>
-                                        <h2 className="card-title text-3xl"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
-                                        <div className="card-actions justify-evenly align-center mt-2.5">
-                                            <button className="btn btn-secondary">Delete</button>
-                                            <button className="btn btn-primary">Update</button>
+                                <Zoom>
+                                    <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
+                                        <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
+                                        <div className="card-body">
+                                            <h2 className="card-title text-2xl">{item.title}</h2>
+                                            <h2 className="card-title text-xl">{item.category}</h2>
+                                            <h2 className="card-title text-3xl"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
+                                            <div className="card-actions justify-evenly align-center mt-2.5">
+                                                <button className="btn btn-secondary">Delete</button>
+                                                <button className="btn btn-primary">Update</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Zoom>
                             </>
                         )
                     })

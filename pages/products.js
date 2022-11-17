@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useCart } from "react-use-cart";
 import Head from 'next/head';
 import Link from 'next/link';
+import Zoom from 'react-reveal/Zoom';
 
 const Products = () => {
     const [items, setItems] = useState([])
@@ -24,7 +25,7 @@ const Products = () => {
                     <div className="input-group">
                         <input type="text" placeholder="Search…" className="input input-bordered w-36" />
                         <button className="btn btn-square glass">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#D926A9"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                         </button>
                     </div>
                 </div>
@@ -42,17 +43,19 @@ const Products = () => {
                     items.map(item => {
                         return (
                             <>
-                                <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
-                                    <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title text-2xl">{item.title}</h2>
-                                        <h2 className="card-title text-xl">{item.category}</h2>
-                                        <div className="card-actions justify-between align-center mt-2.5">
-                                            <h2 className="card-title text-3xl"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
-                                            <button onClick={() => addItem(item)} className="btn btn-primary">Append</button>
+                                <Zoom>
+                                    <div className="card w-72 bg-base-100 shadow-xl glass" key={item.id}>
+                                        <figure><img src={item.image} className='w-80 h-80' alt="Shoes" /></figure>
+                                        <div className="card-body">
+                                            <h2 className="card-title text-2xl">{item.title}</h2>
+                                            <h2 className="card-title text-xl">{item.category}</h2>
+                                            <div className="card-actions justify-between align-center mt-2.5">
+                                                <h2 className="card-title text-3xl"><span className='text-secondary font-extrabold'>$</span> {item.price}</h2>
+                                                <button onClick={() => addItem(item)} className="btn btn-primary">Append</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Zoom>
                             </>
                         )
                     })
